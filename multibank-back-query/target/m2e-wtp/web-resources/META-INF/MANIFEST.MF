@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Implementation-Title: multibank-back
+Implementation-Version: 0.1
+Built-By: Pob
+Implementation-Vendor-Id: com-multibank
+Build-Jdk: 1.8.0_141
+Implementation-URL: http://projects.spring.io/spring-boot/multibank-ba
+ ck/
+Created-By: Maven Integration for Eclipse
+Implementation-Vendor: Pivotal Software, Inc.
+

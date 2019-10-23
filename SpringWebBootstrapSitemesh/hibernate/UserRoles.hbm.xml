@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                                   "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Dec 18, 2015 3:39:28 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+ <class catalog="spring_db" name="com.app.model.UserRoles" table="user_roles">
+  <id name="userRoleId" type="int">
+   <column name="user_role_id"/>
+   <generator class="assigned"/>
+  </id>
+  <property generated="never" lazy="false" name="userId" type="int">
+   <column name="user_id" not-null="true"/>
+  </property>
+  <property generated="never" lazy="false" name="authority" type="string">
+   <column length="45" name="authority" not-null="true"/>
+  </property>
+ </class>
+</hibernate-mapping>

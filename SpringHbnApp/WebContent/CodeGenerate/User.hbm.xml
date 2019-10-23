@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 21, 2015 11:37:51 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="User" table="user" catalog="spring_db">
+        <id name="usId" type="java.lang.Long">
+            <column name="usId" />
+            <generator class="identity" />
+        </id>
+        <property name="usUserName" type="string">
+            <column name="usUserName" length="50" />
+        </property>
+        <property name="usPassword" type="string">
+            <column name="usPassword" length="15" />
+        </property>
+        <property name="usIsActive" type="string">
+            <column name="usIsActive" length="1" />
+        </property>
+    </class>
+</hibernate-mapping>

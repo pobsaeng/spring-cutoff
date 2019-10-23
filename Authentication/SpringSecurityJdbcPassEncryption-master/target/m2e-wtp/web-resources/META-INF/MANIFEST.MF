@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Implementation-Title: pf-securing-web
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: Pob
+Implementation-Vendor-Id: com.example
+Build-Jdk: 1.8.0_141
+Implementation-URL: http://projects.spring.io/spring-boot/SpringBootSe
+ curity/
+Created-By: Maven Integration for Eclipse
+Implementation-Vendor: Pivotal Software, Inc.
+

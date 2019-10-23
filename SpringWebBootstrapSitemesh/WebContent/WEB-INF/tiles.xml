@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+
+<tiles-definitions>
+    <definition name="base.definition" template="/WEB-INF/template/mainTemplate.jsp">        
+        <put-attribute name="title" value=""></put-attribute>
+        <put-attribute name="header" value="/WEB-INF/template/header.jsp"></put-attribute>
+        <put-attribute name="body" value=""></put-attribute>
+        <put-attribute name="footer" value="/WEB-INF/template/footer.jsp"></put-attribute>
+    </definition>
+ 
+    <definition name="addEmployee" extends="base.definition">
+        <put-attribute name="title" value="Employee Data Form"></put-attribute>
+        <put-attribute name="body" value="/WEB-INF/views/addEmployee.jsp"></put-attribute>
+    </definition>
+    
+    <definition name="employeesList" extends="base.definition">
+        <put-attribute name="title" value="Employees List"></put-attribute>
+        <put-attribute name="body" value="/WEB-INF/views/employeesList.jsp"></put-attribute>
+    </definition>
+ 
+ <definition name="test" extends="base.definition">
+        <put-attribute name="title" value="Tester"></put-attribute>
+        <put-attribute name="body" value="/WEB-INF/views/test.jsp"></put-attribute>
+    </definition>
+    
+    <definition name="bootstrap" extends="base.definition">
+        <put-attribute name="title" value="Tester"></put-attribute>
+        <put-attribute name="body" value="/WEB-INF/views/bootstrap.jsp"></put-attribute>
+    </definition>
+    
+    <definition name="AddUser" extends="base.definition">
+        <put-attribute name="title" value="Tester"></put-attribute>
+        <put-attribute name="body" value="/WEB-INF/views/AddUser.jsp"></put-attribute>
+    </definition>
+    
+    <definition name="ShowUsers" extends="base.definition">
+        <put-attribute name="title" value="Tester"></put-attribute>
+        <put-attribute name="body" value="/WEB-INF/views/ShowUsers.jsp"></put-attribute>
+    </definition>
+    
+    <definition name="AdmissionForm" extends="base.definition">
+        <put-attribute name="title" value="Tester"></put-attribute>
+        <put-attribute name="body" value="/WEB-INF/views/AdmissionForm.jsp"></put-attribute>
+    </definition>
+    
+    <definition name="register" extends="base.definition">
+        <put-attribute name="title" value="Tester"></put-attribute>
+        <put-attribute name="body" value="/WEB-INF/views/register.jsp"></put-attribute>
+    </definition>
+    
+    <definition name="index" extends="base.definition">
+        <put-attribute name="title" value="Tester"></put-attribute>
+        <put-attribute name="body" value="/WEB-INF/views/index.jsp"></put-attribute>
+    </definition>
+    
+     <definition name="login" extends="base.definition">
+        <put-attribute name="title" value="Tester"></put-attribute>
+        <put-attribute name="body" value="/WEB-INF/views/login.jsp"></put-attribute>
+    </definition>
+    
+    <definition name="formPage" extends="base.definition">
+        <put-attribute name="title" value="Tester"></put-attribute>
+        <put-attribute name="body" value="/WEB-INF/views/formPage.jsp"></put-attribute>
+    </definition>
+    
+    <definition name="welcome" extends="base.definition">
+        <put-attribute name="title" value="Tester"></put-attribute>
+        <put-attribute name="body" value="/WEB-INF/views/welcome.jsp"></put-attribute>
+    </definition>
+   
+</tiles-definitions>

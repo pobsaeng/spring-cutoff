@@ -1,0 +1,21 @@
+app:
+  name: springboot-jwt-demo
+  
+jwt:
+  header: Authorization
+  expires_in: 300
+  mobile_expires_in: 600
+  secret: queenvictoria
+      
+  spring:
+    profiles: container
+    jpa:
+        database: MYSQL
+        hibernate:
+            ddl-auto: validate
+
+    datasource:
+        url: jdbc:mysql://mysql:3306/springboot-jwt-starter
+        username: root
+        password: 1234
+        driver-class-name: com.mysql.jdbc.Driver

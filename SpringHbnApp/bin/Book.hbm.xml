@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="com.app.model.Book" table="Book" catalog="spring_hbn_app">
+        <id name="isbn" type="string">
+            <column name="ISBN" length="17" />
+            <generator class="assigned" />
+        </id>
+        <property name="title" type="string">
+            <column name="Title" length="256" not-null="true" />
+        </property>
+        <property name="author" type="string">
+            <column name="Author" length="256" not-null="true" />
+        </property>
+        <property name="publisher" type="string">
+            <column name="Publisher" length="256" not-null="true" />
+        </property>
+        <property name="yearPublisher" type="string">
+            <column name="YearPublisher" length="4" not-null="true" />
+        </property>
+        <property name="page" type="int">
+            <column name="Page" not-null="true" />
+        </property>
+        <property name="price" type="big_decimal">
+            <column name="Price" precision="10" not-null="true" />
+        </property>
+        <property name="weight" type="float">
+            <column name="Weight" precision="12" scale="0" not-null="true" />
+        </property>
+        <property name="stock" type="int">
+            <column name="Stock" not-null="true" />
+        </property>
+        <property name="createUpdate" type="timestamp">
+            <column name="CreateUpdate" length="19" not-null="true" />
+        </property>
+        <property name="createDate" type="timestamp">
+            <column name="CreateDate" length="19" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.app.model.Customer" table="Customer">
+		<id column="cusId" name="cusId">
+			<generator class="identity" />
+		</id>
+		
+		<property column="cusFirstName" generated="never" lazy="false" length="50" name="cusFirstName" not-null="false" />
+		<property column="cusLastName" generated="never" lazy="false" length="50" name="cusLastName" not-null="false" />
+		<property column="cusAge" generated="never" lazy="false" name="cusAge" type="int" />
+
+<!-- 		<set name="addresses" table="Address" cascade="all"> -->
+<!-- 			<key column="adrCusId" /> -->
+<!-- 			<one-to-many class="com.app.model.Address" /> -->
+<!-- 		</set>		 -->
+	</class>
+</hibernate-mapping>

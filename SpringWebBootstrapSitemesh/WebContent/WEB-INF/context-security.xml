@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:security="http://www.springframework.org/schema/security"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/security
+    http://www.springframework.org/schema/security/spring-security-3.1.xsd">
+  
+<security:http auto-config="true">
+	<security:intercept-url pattern="/loginSuccess*" access="ROLE_USER, ROLE_ADMIN" />
+	<security:form-login login-page="/login" default-target-url="/loginSuccess" authentication-failure-url="/loginFail" />
+	<security:logout logout-success-url="/logout" delete-cookies="JSESSIONID"/>
+</security:http>
+
+<security:authentication-manager alias="authenticationManager">
+    <security:authentication-provider user-service-ref="userDetailsService">
+<!--     <security:password-encoder hash="md5" /> -->
+    </security:authentication-provider>
+</security:authentication-manager>
+
+<bean id="userDetailsService" class="com.app.security.UserDetailsServiceImpl">
+<property name="usersDao" ref="usersDao"/>
+</bean>
+
+<!-- authentication	access page -->
+	<bean id="webexpressionHandler" class="org.springframework.security.web.access.expression.DefaultWebSecurityExpressionHandler" />
+</beans>
+

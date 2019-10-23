@@ -1,0 +1,14 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/spring_extjs_db?useSSL=false
+    username: root
+    password: 1234
+  jpa:
+    show-sql: true
+    hibernate:
+#      ddl-auto: create-drop
+      naming:
+        strategy: org.hibernate.cfg.ImprovedNamingStrategy
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5Dialect
